@@ -20,12 +20,7 @@ Welcome to my awesome Login Page! This repository contains a stylish and functio
 - "Forgot Password?" functionality with email verification.
 - Easy integration with social media logins (Google, Facebook, and Twitter).
 - Quick link to create a new account.
-
-## Demo
-
-[![Demo](demo.gif)](https://example.com)
-
-Check out the live demo [here](https://example.com).
+  
 
 ## Usage
 
