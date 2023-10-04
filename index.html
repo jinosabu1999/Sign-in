@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Define the style for the elements */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+.title {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.input {
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  background-color: yellow;
+  color: black;
+  
+}
+
+.button {
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  padding-left: 15px;
+  background-color: black;
+  color: white;
+}
+
+.link {
+  color: red;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 80px;
+  margin-left: 70px;
+}
+
+.icon {
+  width: 20px;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<div class="screen">
+<h1 class="title">JINO VLOGZ</h1>
+<img class="profile" src="profile pic.jpg" alt="Profile picture">
+<form class="form">
+<input class="input" type="password" placeholder="Password">
+<button class="button" type="submit">SIGN IN</button>
+<a class="link" href="#">FORGOT PASSWORD?</a>
+<div class="social">
+<img class="icon" src="https://seeklogo.com/images/G/google-2015-logo-65BBD07B01-seeklogo.com.png" alt="Google icon">
+<img class="icon" src="https://seeklogo.com/images/F/facebook-icon-circle-logo-09F32F61FF-seeklogo.com.png" alt="Facebook icon">
+<img class="icon" src="https://seeklogo.com/images/T/twitter-x-logo-0339F999CF-seeklogo.com.png?v=638264860180000000" alt="X icon">
+</div>
+<a class="link" href="#">CREATE AN ACCOUNT</a>
+</form>
+</div>
+<script>
+// Define the script for the functionality
+// Get the elements from the document
+var form = document.querySelector(".form");
+var input = document.querySelector(".input");
+var button = document.querySelector(".button");
+var link = document.querySelector(".link");
+
+// Add an event listener for the form submission
+form.addEventListener("submit", function(event) {
+    // Prevent the default action of reloading the page
+    event.preventDefault();
+    // Check if the input is empty or not
+    if (input.value === "") {
+        // If empty, show an alert message
+        alert("Please enter your password");
+    } else {
+        // If not empty, sign in the user and redirect to another page
+        // For simplicity, we assume that any password is valid
+        alert("You have signed in successfully");
+        window.location.href = "home.html";
+    }
+});
+
+// Add an event listener for the forgot password link
+link.addEventListener("click", function(event) {
+    // Prevent the default action of opening the link
+    event.preventDefault();
+    // Show a prompt to enter the email address
+    var email = prompt("Please enter your email address");
+    // Check if the email is valid or not
+    if (email === null || email === "" || !email.includes("@")) {
+        // If invalid, show an alert message
+        alert("Please enter a valid email address");
+    } else {
+        // If valid, send a reset password link to the email and show a confirmation message
+        alert("A reset password link has been sent to " + email);
+    }
+});
+</script>
+</body>
+</html>
