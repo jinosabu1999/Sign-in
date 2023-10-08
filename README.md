@@ -27,7 +27,7 @@ Welcome to my awesome Login Page! This repository contains a stylish and functio
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/jinosabu1999/your-repo.git
+   git clone https://github.com/jinosabu1999/sign-in.git
    ```
 
 2. Open the `index.html` file in your preferred web browser.
